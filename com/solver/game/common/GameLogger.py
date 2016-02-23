@@ -6,7 +6,7 @@ import os
 rootLogger = None
 
 
-def create_logger():
+def get_logger():
     """Function to build preconfigured logger instance"""
 
     global rootLogger

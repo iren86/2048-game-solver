@@ -3,7 +3,7 @@
 import unittest2
 
 from com.solver.game.common.BrowserFactory import BrowserFactory
-from com.solver.game.common.GameLogger import create_logger
+from com.solver.game.common.GameLogger import get_logger
 from com.solver.game.common.LogDecorator import log_errors
 from com.solver.game.page.GamePage import GamePage
 
@@ -11,7 +11,7 @@ from com.solver.game.page.GamePage import GamePage
 class GamePageTest(unittest2.TestCase):
     """A test class to test game page"""
 
-    logger = create_logger()
+    logger = get_logger()
 
     def setUp(self):
         self.driver = BrowserFactory.create_firefox_debug()

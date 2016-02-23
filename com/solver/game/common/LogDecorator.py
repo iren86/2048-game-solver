@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from com.solver.game.common.GameLogger import create_logger
-
-logger = create_logger()
+from com.solver.game.common.GameLogger import get_logger
 
 
 def log_errors(f, name=None):
@@ -16,7 +14,7 @@ def log_errors(f, name=None):
             result = f(*args, **kwargs)
             return result
         except:
-            logger.exception(name)
+            get_logger().exception(name)
             raise
 
     return wrapped
